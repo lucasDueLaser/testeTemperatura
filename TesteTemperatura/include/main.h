@@ -27,6 +27,9 @@ private:
     TaskHandle_t _Task1; // Declaração de Task1
     TaskHandle_t _Task2; // Declaração de Task2
 
+    // Semáforo para proteger o acesso às variáveis compartilhadas
+    SemaphoreHandle_t _xMutex;
+
     // Variáveis para armazenar os valores mais recentes
     float _temperaturaDif;
     float _temperatura1Ultima = -127.0;
